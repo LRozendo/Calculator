@@ -10,7 +10,7 @@ export function useCalculator () {
         waitingForOperand: false
     })
 
-    const inputDigit = (digit) => {
+    const inputDigit = digit => {
         if (state.waitingForOperand) { // Se tiver uma operação em espera, inicia um novo número
             setState(p => ({...p, currentValue: String(digit), waitingForOperand: false}))
             return
@@ -40,7 +40,7 @@ export function useCalculator () {
         )
     }
 
-    const setOperator = (op) => {
+    const setOperator = op => {
         const {currentValue, previousValue, operator} = state
         const current = parseFloat(currentValue)
 

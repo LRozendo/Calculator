@@ -1,1 +1,75 @@
 @import "tailwindcss";
+
+:root {
+    --bg: #E2E8F0;
+    --bg-c: #FFFFFF;
+    --bg-d: #F8FAFC;
+    --bg-btn-n: #F1F5F9;
+    --bg-btn-a: #E2E8F0;
+    --bg-btn-e: #2563EB;
+    --d-n: #0F172A;
+    --btn-n: #334155;
+    --btn-a: #475569;
+    --btn-e: #FFFFFF;
+}
+
+@utility calculator {
+  @apply w-1/3 h-4/5 p-6 bg-(--bg-c) rounded flex flex-col gap-5;
+
+  min-width: 320px;
+  max-width: 450px;
+}
+
+@utility display {
+  @apply w-full h-1/5 outline-none rounded-2xl flex items-center justify-end bg-(--bg-d) text-(--d-n);
+
+  pointer-events: none;
+
+  padding: 0 20px;
+  min-height: 80px;
+
+  font-size: clamp(2rem, 5vw, 3.5rem); 
+  font-weight: 700;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+@utility lineOp {
+  position: absolute;
+
+  top: 0; left: 5%;
+
+  font-size: clamp(1rem, 2.5vw, 1.5rem); 
+  font-weight: 500;
+  
+  
+  color: var(--d-n);
+  opacity: 0.6; 
+}
+
+@utility btn-grid {
+  @apply grid grid-cols-4 gap-3 grow;
+}
+
+@utility btn {
+  @apply w-full h-full rounded-2xl hover:brightness-90 active:brightness-75;
+
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem); 
+  font-weight: 600;
+
+  transition: filter 0.15s ease;
+
+  &.n {
+    @apply bg-(--bg-btn-n) text-(--btn-n);
+  }
+
+  &.a {
+    @apply bg-(--bg-btn-a) text-(--btn-a);
+  }
+
+  &.e {
+    @apply bg-(--bg-btn-e) text-(--btn-e);
+  }
+}
