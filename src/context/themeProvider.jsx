@@ -21,5 +21,5 @@ export default function ThemeProvider ({ children }) {
         },[theme]
     )
 
-    return <themeContext.Provider value={ [theme, performToggle] }>{children}</themeContext.Provider>
+    return <themeContext.Provider value={ {theme, performToggle} }>{children}</themeContext.Provider>
 }

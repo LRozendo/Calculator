@@ -11,6 +11,9 @@
     --btn-number: #334155;
     --btn-action: #475569;
     --btn-equal: #FFFFFF;
+
+    --btn-toggle: #E2E8F0;
+    --btn-toggle-content: #475569;
 }
 
 html.dark {
@@ -24,6 +27,9 @@ html.dark {
     --btn-number: #E2E8F0;
     --btn-action: #F1F5F9;
     --btn-equal: #FFFFFF;
+
+    --btn-toggle: #475569;
+    --btn-toggle-content: #FCD34D;
 }
 
 @utility calculator {
@@ -85,4 +91,14 @@ html.dark {
   &.e {
     @apply bg-(--bg-btn-equal) text-(--btn-equal);
   }
+}
+
+@utility toggleBtn {
+  @apply p-2 bg-(--btn-toggle) text-(--btn-toggle-content) rounded text-center shadow hover:brightness-90 active:brightness-75;
+
+  width: clamp(40px, 15vw, 100px);
+
+  position: fixed;
+
+  top: 5%; left: 5%;
 }
