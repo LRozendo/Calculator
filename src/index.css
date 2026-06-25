@@ -13,6 +13,19 @@
     --btn-equal: #FFFFFF;
 }
 
+html.dark {
+    --bg: #0F172A;
+    --bg-calculator: #1E293B;
+    --bg-display: #0F172A;
+    --bg-btn-number: #334155;
+    --bg-btn-action: #475569;
+    --bg-btn-equal: #3B82F6;
+    --d-number: #F8FAFC;
+    --btn-number: #E2E8F0;
+    --btn-action: #F1F5F9;
+    --btn-equal: #FFFFFF;
+}
+
 @utility calculator {
   @apply w-1/3 h-4/5 p-6 bg-(--bg-calculator) rounded flex flex-col gap-5;
 
